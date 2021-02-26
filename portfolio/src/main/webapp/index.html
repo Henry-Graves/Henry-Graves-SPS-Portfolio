@@ -2,18 +2,63 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Henry Graves Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js"></script>    
   </head>
-  <body>
+  <body id="bkg-color">
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
+      <h1>Henry Graves's Portfolio</h1>
+
+    <div id = "image">
+        <img src="/images/HenryFace.jpg" alt="Close-up of Henry Graves"style="width:801px;height:534px;border-radius:14px"/></div>
+
+      <p>Welcome!</p>
+      <p id="border1">I'm a sophomore Computer Science student at the University of Central Florida.         
+         I've lived in Florida for all of my life, but I'm hoping to change that by studying abroad as soon as it's possible.</p>
+      <br>         
+
+      <h1>My Dream App</h1>
+      <p id="border2">One which makes financial education more accessible and approachable to improve users’ economic mobility.
+          Then maybe Club Penguin 2.0</p>
+      <br>
+
+      <h1>I'm Currently...</h1>
+      <p id="border3">Figuring out HTML, CSS, and JS, reading Attack on Titan, trying to get good at Rocket League.</p>
+      <br>
+
+      <h1>My Mantra</h1>
+      <p id = "border4"><a href="https://www.youtube.com/watch?v=ZXsQAXx_ao0">Just do it</a></p>
+      <br>
+
+      <h1>Career</h1>
+      <p id="border3">My general career goal is to become a software developer that makes things easier for people to use.
+         I am a student in the Google Software Product Sprint program where I am learning relevant tools and 
+         languages that will help me get to that point. I am also pursuing work experience through internships.
+         Please take a look through my other information below:
+      <br>
+      <a href="https://www.linkedin.com/in/henrygraves/">My LinkedIn</a> 
+      <br>
+      <a href="https://github.com/Henry-Graves">My GitHub</a>
+      <br>
+      <a href="Docs/Henry Graves - Resume - Info Hidden.pdf">My Resume</a></p>
+      <br>
+
+      <h1>Gallery</h1>
+      <p id="border2">-make a separate page for my photos-</p>
+      <br>
+
+      <h1>Music</h1>
+      <p id="border1">-add a list of youtube videos of music that I listened to while doing this-</p>         
+      <br>
+
+      <p>Click the button below to get a random quarantine hobby of mine:</p>
+      <button onclick="addRandomHobby()">Click</button>
+      <div id="hobby-container"></div>
+      <br>
+      <br>
+
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
     </div>
   </body>
 </html>

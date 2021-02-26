@@ -1,9 +1,43 @@
+#bkg-color {
+    background-color: whitesmoke;
+}
+
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 801px;
+  font-family: monospace;
+  font-size: large;
 }
 
-#greeting-container {
+#hobby-container {
   margin-top: 20px;
+  border-bottom: 2px solid #52796f;
+  padding-bottom: 4px;
+}
+
+#image {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#border1 {
+    border-bottom: 2px solid #84a98c;
+    padding-bottom: 4px;
+}
+
+#border2 {
+    border-bottom: 2px solid #52796f;
+    padding-bottom: 4px;
+}
+
+#border3 {
+    border-bottom: 2px solid #354f52;
+    padding-bottom: 4px;
+}
+
+#border4 {
+    border-bottom: 2px solid #2f3e46;
+    padding-bottom: 4px;
 }
