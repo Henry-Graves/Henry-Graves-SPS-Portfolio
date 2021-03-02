@@ -22,6 +22,22 @@
     width: fit-content;
 }
 
+.image-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-thumbnails img {
+  margin: 10px;
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.image-thumbnails img:hover {
+  border: thick solid black;
+}
+
 #border1 {
     border-bottom: 2px solid #84a98c;
     padding-bottom: 4px;
@@ -34,10 +50,5 @@
 
 #border3 {
     border-bottom: 2px solid #354f52;
-    padding-bottom: 4px;
-}
-
-#border4 {
-    border-bottom: 2px solid #2f3e46;
     padding-bottom: 4px;
 }
