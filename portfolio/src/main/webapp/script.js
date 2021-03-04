@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
+// Adds a random greeting to the page.
 function addRandomHobby() {
   const hobbies =
       ['Doing Absolutely Nothing', 'Breathing', 'Forgetting to Blink', 'Tennis', 'Guitar', 'Walking in Nature', 
@@ -29,4 +27,11 @@ function addRandomHobby() {
   hobbyContainer.innerText = hobby;
 }
 
+// Fetches the hardcoded string from the server and adds it to the page.
+async function showString() {
+  const responseFromServer = await fetch('/string');
+  const textFromResponse = await responseFromServer.text();
 
+  const stringContainer = document.getElementById('string-container');
+  stringContainer.innerText = textFromResponse;
+}
