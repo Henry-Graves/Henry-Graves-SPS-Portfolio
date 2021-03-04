@@ -29,9 +29,13 @@ function addRandomHobby() {
 
 // Fetches the hardcoded string from the server and adds it to the page.
 async function showString() {
-  const responseFromServer = await fetch('/string');
-  const textFromResponse = await responseFromServer.text();
+    const responseFromServer = await fetch('/string');
+    const strings = await responseFromServer.json();
 
-  const stringContainer = document.getElementById('string-container');
-  stringContainer.innerText = textFromResponse;
+    // Pick a random string.
+    const randomString = strings[Math.floor(Math.random() * strings.length)];
+
+    // Add it to the page
+    const stringContainer = document.getElementById('string-container');
+    stringContainer.innerText = randomString;
 }
