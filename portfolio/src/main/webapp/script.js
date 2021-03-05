@@ -12,30 +12,42 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Adds a random greeting to the page.
-function addRandomHobby() {
+// Adds a random hobby to the page.
+function showRandomHobby() {
   const hobbies =
       ['Doing Absolutely Nothing', 'Breathing', 'Forgetting to Blink', 'Tennis', 'Guitar', 'Walking in Nature', 
       'Making Coffee', 'Reading Manga (ask me for recommendations!)', 'Calisthenics', 'Valorant', 'Learning Personal Finance', 
       'Learning More about Software Development!'];
+  var resultHobby = " ";
 
-  // Pick a random greeting.
-  const hobby = hobbies[Math.floor(Math.random() * hobbies.length)];
+  // Pick a random hobby different from the last one.
+  const randomHobby = hobbies[Math.floor(Math.random() * hobbies.length)];
+
+  while (randomHobby == resultHobby) {
+        randomHobby = hobbies[Math.floor(Math.random() * strings.length)];
+    }
+    resultHobby = randomHobby;
 
   // Add it to the page.
   const hobbyContainer = document.getElementById('hobby-container');
-  hobbyContainer.innerText = hobby;
+  hobbyContainer.innerText = resultHobby;
 }
 
 // Fetches the hardcoded string from the server and adds it to the page.
-async function showString() {
+async function showRandomString() {
     const responseFromServer = await fetch('/string');
     const strings = await responseFromServer.json();
+    var resultString = " ";
 
-    // Pick a random string.
+    // Pick a random string different from the last one.
     const randomString = strings[Math.floor(Math.random() * strings.length)];
+
+    while (randomString == resultString) {
+        randomString = strings[Math.floor(Math.random() * strings.length)];
+    }
+    resultString = randomString;
 
     // Add it to the page
     const stringContainer = document.getElementById('string-container');
-    stringContainer.innerText = randomString;
+    stringContainer.innerText = resultString;
 }
