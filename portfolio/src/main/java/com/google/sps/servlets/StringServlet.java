@@ -16,9 +16,9 @@ public class StringServlet extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Create the strings to be sent
     ArrayList<String> stringList = new ArrayList<String>();
-    stringList.add("Message 1");
-    stringList.add("Message 2");
-    stringList.add("Message 3");
+    stringList.add("This website was created in the span of 3 weeks, starting from no knowledge of anything front-end.");
+    stringList.add("This website was created during Google's Software Product Sprint of Spring 2021.");
+    stringList.add("I plan on continuing to improve this website and having it as a personal portfolio through my career.");
     
     // Create JSON using GSON
     String json = convertToJsonUsingGson(stringList);
