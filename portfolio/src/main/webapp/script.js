@@ -59,27 +59,44 @@ async function showRandomString() {
 // Google Charts Library @ https://developers.google.com/chart 
 // ---------------------------------------------------------------
 google.charts.load('current', {'packages':['corechart', 'line']});
-google.charts.setOnLoadCallback(drawBackgroundColorChart);
+google.charts.setOnLoadCallback(drawChart);
 
 // Create a line chart and add it to the page.
-function drawBackgroundColorChart() {
+function drawChart() {
     const data = new google.visualization.DataTable();
-    data.addColumn('number', 'Time');
-    data.addColumn('number', 'Score');
+    data.addColumn('string', 'Year');
+    data.addColumn('number', '%');
         data.addRows([
-            [0, 0],
-            [1, 5],
-            [2, 15]
+            ['1999', 58],
+            ['2000', 62],
+	        ['2001', 62],
+	        ['2002', 60],
+	        ['2003', 60],
+	        ['2004', 61],
+            ['2005', 62],
+            ['2006', 61],
+            ['2007', 65],
+            ['2008', 62],
+            ['2009', 57],
+            ['2010', 56],
+            ['2011', 54],
+            ['2012', 53],
+            ['2013', 52],
+            ['2014', 54],
+            ['2015', 55],
+            ['2016', 52],
+            ['2017', 54],
+            ['2018', 55],
+            ['2019', 55],
+            ['2020', 55],
         ]);
 
     const options = {
-        'title': 'Time vs Score',
-        'hAxis: title': 'Time', 
-        'vAxis: title': 'Popularity',
-
+        'title': 'Percentage of American adults investing in the stock market from 1999 - 2020',
+        'legend': {position:'none'},
         'backgroundColor': 'WhiteSmoke', 
-
-        'width':500,
+        'colors':['#84a98c'],  
+        'width':801,
         'height':400
     };
     
