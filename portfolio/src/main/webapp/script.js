@@ -55,3 +55,34 @@ async function showRandomString() {
     const stringContainer = document.getElementById('string-container');
     stringContainer.innerText = resultString;
 }
+
+// Google Charts Library @ https://developers.google.com/chart 
+// ---------------------------------------------------------------
+google.charts.load('current', {'packages':['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBackgroundColorChart);
+
+// Create a line chart and add it to the page.
+function drawBackgroundColorChart() {
+    const data = new google.visualization.DataTable();
+    data.addColumn('number', 'Time');
+    data.addColumn('number', 'Score');
+        data.addRows([
+            [0, 0],
+            [1, 5],
+            [2, 15]
+        ]);
+
+    const options = {
+        'title': 'Time vs Score',
+        'hAxis: title': 'Time', 
+        'vAxis: title': 'Popularity',
+
+        'backgroundColor': 'WhiteSmoke', 
+
+        'width':500,
+        'height':400
+    };
+    
+    const chart = new google.visualization.LineChart(document.getElementById('chart-container'));
+    chart.draw(data, options);
+}
