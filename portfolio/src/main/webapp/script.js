@@ -2,8 +2,8 @@
 function showRandomHobby() {
     const hobbies =
         ['Doing Absolutely Nothing', 'Breathing', 'Forgetting to Blink', 'Tennis', 'Guitar', 'Walking in Nature', 
-         'Making Coffee', 'Reading Manga (ask me for recommendations!)', 'Calisthenics', 'Valorant', 'Learning Personal Finance', 
-         'Learning More about Software Development!'];
+         'Making Coffee', 'Reading Manga (favorite: Attack on Titan)', 'Watching Anime (favorite: FLCL)', 'Valorant', 'Learning Personal Finance', 
+         'Fixing 1 bug, creating 2'];
      
     // Pick a random hobby different from the last one, using localStorage to verify difference.     
     var randomHobby = hobbies[Math.floor(Math.random() * hobbies.length)];
@@ -63,6 +63,7 @@ google.charts.setOnLoadCallback(drawChart);
 
 // Create a line chart and add it to the page.
 function drawChart() {
+    console.log("redraw");    
     const data = new google.visualization.DataTable();
     data.addColumn('string', 'Year');
     data.addColumn('number', '%');
@@ -96,8 +97,7 @@ function drawChart() {
         'legend': {position:'none'},
         'backgroundColor': 'WhiteSmoke', 
         'colors':['#84a98c'],  
-        'width':801,
-        'height':400
+        'height': 400
     };
     
     const chart = new google.visualization.LineChart(document.getElementById('chart-container'));

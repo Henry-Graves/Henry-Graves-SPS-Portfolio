@@ -3,40 +3,42 @@
 }
 
 #content {
-  font-family: monospace;
+  font-family: 'Lexend Deca', sans-serif;
   font-size: large;
   margin-left: auto;
   margin-right: auto;
-  width: 801px;
-  
+  width: 50%;
+}
+
+#chart-container {
+  width: 100%;
+}
+
+#response-container {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: large;
+  width: 100%;
+  min-height: 150px;
 }
 
 #hobby-container {
-  border-bottom: 2px solid #52796f;
   margin-top: 20px;
   padding-bottom: 4px;
 }
 
+#string-container {
+  margin-top: 20px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #52796f;
+}
+
 #image {
+  display:block;
   margin-left: auto;
   margin-right: auto;
-  width: fit-content;
-}
-
-.image-thumbnails {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.image-thumbnails img {
-  margin: 10px;
-  max-height: 200px;
-  max-width: 200px;
-}
-
-.image-thumbnails img:hover {
-  border: thick solid black;
+  max-width: 100%;
+  height: auto;
+  border-radius:14px;
 }
 
 #border1 {
