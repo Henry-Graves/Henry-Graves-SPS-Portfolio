@@ -95,7 +95,7 @@ function drawChart() {
     const options = {
         'title': 'Percentage of American adults investing in the stock market from 1999 - 2020',
         'legend': {position:'none'},
-        'backgroundColor': 'WhiteSmoke', 
+        'backgroundColor': 'White', 
         'colors':['#84a98c'],  
         'height': 400
     };
