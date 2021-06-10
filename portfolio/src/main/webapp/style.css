@@ -2,6 +2,13 @@
   background-color: white;
 }
 
+#socials {
+    width: 48px;
+    vertical-align: middle;
+    float: middle;
+    padding: 12px;
+}
+
 @media only screen and (min-width: 500px) {
     #content {
     font-family: 'Lexend Deca', sans-serif;

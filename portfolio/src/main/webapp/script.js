@@ -62,8 +62,7 @@ google.charts.load('current', {'packages':['corechart', 'line']});
 google.charts.setOnLoadCallback(drawChart);
 
 // Create a line chart and add it to the page.
-function drawChart() {
-    console.log("redraw");    
+function drawChart() {  
     const data = new google.visualization.DataTable();
     data.addColumn('string', 'Year');
     data.addColumn('number', '%');
